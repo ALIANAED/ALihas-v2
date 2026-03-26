@@ -4,7 +4,7 @@ services:
     image: "coollabsio/openclaw:2026.2.6"
     restart: unless-stopped
     networks:
-      - dokploy-net
+      - dokploy-network
       - core-agentes-net
     environment:
       # ════════════════════════════════════════════════════════════════════
@@ -105,7 +105,7 @@ services:
 # DECLARACIÓN DE REDES EXTERNAS (Aislamiento SRE)
 # ════════════════════════════════════════════════════════════════════
 networks:
-  dokploy-net:
+  dokploy-network:
     external: true
   core-agentes-net:
     external: true
